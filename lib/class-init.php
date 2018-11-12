@@ -17,7 +17,7 @@ namespace MWD\ACFFCB;
 
             //Initialize shortcodes
             $this->add_shortcodes();
-						
+
             // Enqueue admin styles and scripts
             add_action('admin_enqueue_scripts', array( $this, 'admin_styles' ) );
             add_action('admin_enqueue_scripts', array( $this, 'dev_mode' ) );
@@ -283,3 +283,4 @@ namespace MWD\ACFFCB;
                 }
             }
         }
+

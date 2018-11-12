@@ -54,3 +54,23 @@ add_action('wp_loaded', function() {
 		add_filter( 'the_content', array( 'MWD\ACFFCB\CreateBlocks', 'acffcb_add_to_content' ) );
 
 });
+
+/*************************************************************/
+/*   Friendly Block Titles                                  */
+/***********************************************************/
+
+function my_layout_title($title, $field, $layout, $i) {
+	if($value = get_sub_field('navigation_title')) {
+		return $value;
+	} else {
+		foreach($layout['sub_fields'] as $sub) {
+			if($sub['name'] == 'layout_title') {
+				$key = $sub['key'];
+				if(array_key_exists($i, $field['value']) && $value = $field['value'][$i][$key])
+					return $value;
+			}
+		}
+	}
+	return $title;
+}
+add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4);

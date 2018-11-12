@@ -68,10 +68,10 @@ class Fields {
 		return(
 			array (
 				'key' => $this->key . '-' . $thisKey . '-' . __FUNCTION__,
-			    'label' => 'Navigation Title',
+			    'label' => 'Block Title',
 			    'name' => 'navigation_title',
 			    'type' => 'text',
-			    'instructions' => '',
+			    'instructions' => 'used to identify blocks in admin',
 			    'required' => 0,
 			    'conditional_logic' => 0,
 			    'wrapper' => array (

@@ -99,7 +99,7 @@ class Layouts {
 
 						// Content tab
 						$FCBFields->tab_content(),
-						$FCBFlexibleContent->media('0', '12'),
+						$FCBFlexibleContent->media('0', '4'),
 
 						// Background tab
 						$FCBFields->tab_background(),
